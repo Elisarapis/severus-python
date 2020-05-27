@@ -19,3 +19,10 @@ ql.Settings.instance().evaluationDate = calculation_date
 
 payoff = ql.PlainVanillaPayoff(option_type, strike_price)
 exercise = ql.EuropeanExercise(maturity_date)
+european_option = ql.VanillaOption(payoff, exercise)
+
+v0 = volatility*volatility
+kappa = 0.1
+theta = v0
+sigma = 0.1
+rho = -0.75
